@@ -1,7 +1,25 @@
 {
-    "name": "regniblod/symfony.ddd",
+    "name": "regniblod/symfony-ddd",
+    "description": "A Symfony standard skeleton following DDD architecture.",
+    "version": "0.3",
     "license": "MIT",
     "type": "project",
+    "keywords": ["symfony", "ddd", "domain"],
+    "homepage": "https://github.com/regniblod/symfony-ddd",
+    "authors": [
+        {
+            "name": "Moein Akbarof",
+            "email": "moein.ak@gmail.com",
+            "homepage": "https://github.com/moein",
+            "role": "Architect"
+        },
+        {
+            "name": "Albert Munoz",
+            "email": "regniblod@gmail.com",
+            "homepage": "http://www.github.com/regniblod",
+            "role": "Developer"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "": "src/"
@@ -10,11 +28,6 @@
             "app/AppKernel.php",
             "app/AppCache.php"
         ]
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
     },
     "require": {
         "php": ">=5.5.9",
@@ -30,7 +43,8 @@
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
-        "symfony/phpunit-bridge": "^3.0"
+        "symfony/phpunit-bridge": "^3.0",
+        "phpunit/phpunit": "^5.3"
     },
     "scripts": {
         "post-install-cmd": [

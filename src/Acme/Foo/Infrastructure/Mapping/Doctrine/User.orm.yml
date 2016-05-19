@@ -1,0 +1,20 @@
+Acme\Foo\Domain\Model\User:
+  type: entity
+  repositoryClass: Acme\Foo\Infrastructure\Repository\Doctrine\UserRepository
+  table: user
+
+  id:
+      id:
+          type: integer
+          generator:
+              strategy: AUTO
+
+  fields:
+      firstName:
+          type: string
+          length: 20
+      lastName:
+          type: string
+          length: 20
+      createdAt:
+          type: datetime

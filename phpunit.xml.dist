@@ -14,17 +14,18 @@
 
     <testsuites>
         <testsuite name="Project Test Suite">
-            <directory>tests</directory>
+            <directory>src</directory>
         </testsuite>
     </testsuites>
 
     <filter>
-        <whitelist>
+        <whitelist processUncoveredFilesFromWhitelist="true">
             <directory>src</directory>
             <exclude>
-                <directory>src/*Bundle/Resources</directory>
-                <directory>src/*/*Bundle/Resources</directory>
-                <directory>src/*/Bundle/*Bundle/Resources</directory>
+                <directory>src/Acme/*/Application/*Bundle/Resources</directory>
+                <directory>src/Acme/*/Infrastructure/Mapping</directory>
+                <directory>src/Acme/*/Infrastructure/Migrations</directory>
+                <directory>src/Acme/*/Test</directory>
             </exclude>
         </whitelist>
     </filter>

@@ -1,7 +1,6 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
-    - { resource: services.yml }
     - { resource: "@AcmeFooBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
@@ -58,7 +57,15 @@ doctrine:
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         naming_strategy: doctrine.orm.naming_strategy.underscore
-        auto_mapping: true
+        auto_mapping: false
+
+        mappings:
+            AcmeFooBundle:
+                type: yml
+                dir: '%kernel.root_dir%/../src/Acme/Foo/Infrastructure/Mapping/Doctrine'
+                prefix: Acme\Foo\Domain\Model
+                alias: AcmeFooBundle
+                is_bundle: false
 
 # Swiftmailer Configuration
 swiftmailer:

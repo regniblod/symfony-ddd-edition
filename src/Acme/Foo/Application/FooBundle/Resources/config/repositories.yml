@@ -1,0 +1,5 @@
+services:
+    acme.user_repository:
+        class: Acme\Foo\Infrastructure\Repository\Doctrine\UserRepository
+        factory: ['@doctrine', getRepository]
+        arguments: [ Acme\Foo\Domain\Model\User ]
