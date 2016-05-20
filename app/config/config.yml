@@ -62,7 +62,7 @@ doctrine:
         mappings:
             AcmeFooBundle:
                 type: yml
-                dir: '%kernel.root_dir%/../src/Acme/Foo/Infrastructure/Mapping/Doctrine'
+                dir: '%kernel.root_dir%/../src/Acme/Foo/Infrastructure/Mapping/Doctrine/ORM'
                 prefix: Acme\Foo\Domain\Model
                 alias: AcmeFooBundle
                 is_bundle: false

@@ -1,5 +1,5 @@
 <?php
-namespace Acme\Foo\Test\Domain\Model;
+namespace Acme\Foo\Tests\Domain\Model;
 
 use Acme\Foo\Domain\Model\User;
 
