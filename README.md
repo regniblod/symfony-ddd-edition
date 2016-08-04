@@ -1,4 +1,4 @@
-Symfony Standard DDD Edition
+Symfony-Standard DDD Edition
 ============================
 
 Symfony standard edition with DDD architecture.
@@ -33,12 +33,14 @@ src
         ├── Infrastructure
         │   ├── Mapping
         │   │   └── Doctrine
+        │   │       └── ORM
         │   ├── Migrations
         │   │   └── Doctrine
         │   ├── Repository
         │   │   └── Doctrine
+        │   │       └── ORM
         │   └── Service
-        └── Test
+        └── Tests
             ├── Domain
             │   ├── Component
             │   ├── Event
@@ -80,7 +82,7 @@ doctrine:
         mappings:
             AcmeFooBundle:
                 type: yml
-                dir: '%kernel.root_dir%/../src/Acme/Foo/Infrastructure/Mapping/Doctrine'
+                dir: '%kernel.root_dir%/../src/Acme/Foo/Infrastructure/Mapping/Doctrine/ORM'
                 prefix: Acme\Foo\Domain\Model
                 alias: AcmeFooBundle
                 is_bundle: false

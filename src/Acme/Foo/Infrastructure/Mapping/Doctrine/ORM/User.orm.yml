@@ -1,6 +1,6 @@
 Acme\Foo\Domain\Model\User:
   type: entity
-  repositoryClass: Acme\Foo\Infrastructure\Repository\Doctrine\UserRepository
+  repositoryClass: Acme\Foo\Infrastructure\Repository\Doctrine\ORM\UserRepository
   table: user
 
   id:

@@ -1,6 +1,6 @@
 <?php
 
-namespace Acme\Foo\Infrastructure\Repository\Doctrine;
+namespace Acme\Foo\Infrastructure\Repository\Doctrine\ORM;
 
 use Acme\Foo\Domain\Model\User;
 use Acme\Foo\Domain\Repository\UserRepository as UserRepositoryInterface;

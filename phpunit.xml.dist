@@ -25,7 +25,7 @@
                 <directory>src/Acme/*/Application/*Bundle/Resources</directory>
                 <directory>src/Acme/*/Infrastructure/Mapping</directory>
                 <directory>src/Acme/*/Infrastructure/Migrations</directory>
-                <directory>src/Acme/*/Test</directory>
+                <directory>src/Acme/*/Tests</directory>
             </exclude>
         </whitelist>
     </filter>
