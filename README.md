@@ -1,7 +1,7 @@
 Symfony Standard DDD Edition
 ============================
 
-Cool description.
+Symfony standard edition with DDD architecture.
 
 
 ## Architecture
@@ -53,7 +53,7 @@ src
 ## How to use
 
 1. Clone the project:
-`git clone https://github.com/regniblod/symfony-ddd.git {your_proyect_folder}`
+`git clone https://github.com/regniblod/symfony-standard-ddd.git {your_proyect_folder}`
 
 2. Go to the project folder:
 `cd {your_proyect_folder}`
@@ -75,16 +75,8 @@ src
 
 `app/config.yml`:
 ```yaml
-imports:
-    ...
-    - { resource: "@AcmeFooBundle/Resources/config/services.yml" }
-
-...
-
 doctrine:
-    ...
     orm:
-        ...
         mappings:
             AcmeFooBundle:
                 type: yml
@@ -108,20 +100,15 @@ foo:
 public function registerBundles()
 {
     $bundles = [
-        ...
         new Acme\Foo\Application\FooBundle\AcmeFooBundle(),
     ];
-
-    ...
-
-    return $bundles;
 }
 ```
 
 
 ## Inspiration
 
-- Moein Akbarof and our work at trivago.
+- [@moein](https://github.com/moein) and our work at trivago.
 - https://github.com/PhpFriendsOfDdd/state-of-the-union
 
 
