@@ -1,7 +1,6 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
-    - { resource: "@AcmeFooBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -60,11 +59,11 @@ doctrine:
         auto_mapping: false
 
         mappings:
-            AcmeFooBundle:
+            YourNamespaceProjectModuleBundle:
                 type: yml
-                dir: '%kernel.root_dir%/../src/Acme/Foo/Infrastructure/Mapping/Doctrine/ORM'
-                prefix: Acme\Foo\Domain\Model
-                alias: AcmeFooBundle
+                dir: '%kernel.root_dir%/../src/YourNamespace/Project/Module/Infrastructure/Mapping/Doctrine/ORM'
+                prefix: YourNamespace\Project\Module\Domain\Model
+                alias: YourNamespaceProjectModuleBundle
                 is_bundle: false
 
 # Swiftmailer Configuration

@@ -10,14 +10,12 @@
         {
             "name": "Moein Akbarof",
             "email": "moein.ak@gmail.com",
-            "homepage": "https://github.com/moein",
-            "role": "Architect"
+            "homepage": "https://github.com/moein"
         },
         {
             "name": "Albert Munoz",
             "email": "regniblod@gmail.com",
-            "homepage": "http://www.github.com/regniblod",
-            "role": "Developer"
+            "homepage": "http://www.github.com/regniblod"
         }
     ],
     "autoload": {
