@@ -16,14 +16,14 @@ If you don't have Composer yet, download it following the instructions on http:/
 
 Then, use the `create-project` command to generate a new Symfony application:
 
-    php composer.phar create-project regniblod/symfony-standard-ddd --stability=dev path/to/install
+    php composer.phar create-project regniblod/symfony-ddd-edition --stability=dev path/to/install
 
 Composer will install Symfony and all its dependencies under the `path/to/install` directory.
 
 ### Download an Archive File
 To quickly test Symfony, you can also download an [archive][3] of the Standard DDD Edition and unpack it somewhere under your web server root directory.
 
-If you downloaded an archive "without vendors", you also need to install allthe necessary dependencies. Download composer (see above) and run thefollowing command:
+If you downloaded an archive "without vendors", you also need to install all the necessary dependencies. Download composer (see above) and run the following command:
 
     php composer.phar install
 
@@ -113,7 +113,7 @@ It comes pre-configured with the following bundles:
 All libraries and bundles included in the Symfony Standard Edition are released under the MIT or BSD license.
 
 ## Architecture
-Explain different layers.
+TODO: Explain different layers.
 
 ## Folder structure
 ```
@@ -176,11 +176,13 @@ src
 
 ## ToDo
 - Create command to generate automagically a new module.
+- Explain architecture.
+- Create sample app.
 
 
 [1]:  https://symfony.com/doc/3.0/book/installation.html
 [2]:  http://getcomposer.org/
-[3]:  https://github.com/regniblod/symfony-standard-ddd/archive/master.zip
+[3]:  https://github.com/regniblod/symfony-ddd-edition/archive/master.zip
 [4]:  http://symfony.com/doc/2.7/quick_tour/the_big_picture.html
 [5]:  http://symfony.com/doc/2.7/index.html
 [6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html

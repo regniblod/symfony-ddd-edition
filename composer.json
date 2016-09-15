@@ -1,11 +1,11 @@
 {
-    "name": "regniblod/symfony-standard-ddd",
+    "name": "regniblod/symfony-ddd-edition",
     "description": "A Symfony standard skeleton following DDD architecture.",
     "version": "0.3",
     "license": "MIT",
     "type": "project",
     "keywords": ["symfony", "ddd", "domain"],
-    "homepage": "https://github.com/regniblod/symfony-standard-ddd",
+    "homepage": "https://github.com/regniblod/symfony-ddd-edition",
     "authors": [
         {
             "name": "Moein Akbarof",
