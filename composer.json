@@ -1,7 +1,7 @@
 {
     "name": "regniblod/symfony-ddd-edition",
     "description": "A Symfony standard skeleton following DDD architecture.",
-    "version": "0.3",
+    "version": "1.0.0",
     "license": "MIT",
     "type": "project",
     "keywords": ["symfony", "ddd", "domain"],
