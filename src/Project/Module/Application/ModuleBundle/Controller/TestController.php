@@ -1,6 +1,6 @@
 <?php
 
-namespace YourNamespace\Project\Module\Application\ModuleBundle\Controller;
+namespace Project\Module\Application\ModuleBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -20,7 +20,7 @@ class TestController extends Controller
      */
     public function indexAction(Request $request)
     {
-        return $this->render('@YourNamespaceProjectModuleBundle/Resources/views/default/index.html.twig', [
+        return $this->render('@ProjectModuleBundle/Resources/views/default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
         ]);
     }

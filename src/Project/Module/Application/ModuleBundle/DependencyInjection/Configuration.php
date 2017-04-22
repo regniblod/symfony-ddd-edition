@@ -1,6 +1,6 @@
 <?php
 
-namespace YourNamespace\Project\Module\Application\ModuleBundle\DependencyInjection;
+namespace Project\Module\Application\ModuleBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

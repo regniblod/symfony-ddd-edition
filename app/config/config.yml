@@ -59,11 +59,11 @@ doctrine:
         auto_mapping: false
 
         mappings:
-            YourNamespaceProjectModuleBundle:
+            ProjectModuleBundle:
                 type: yml
-                dir: '%kernel.root_dir%/../src/YourNamespace/Project/Module/Infrastructure/Mapping/Doctrine/ORM'
-                prefix: YourNamespace\Project\Module\Domain\Model
-                alias: YourNamespaceProjectModuleBundle
+                dir: '%kernel.root_dir%/../src/Project/Module/Infrastructure/Mapping/Doctrine/ORM'
+                prefix: Project\Module\Domain\Model
+                alias: ProjectModuleBundle
                 is_bundle: false
 
 # Swiftmailer Configuration

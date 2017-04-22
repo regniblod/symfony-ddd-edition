@@ -47,10 +47,10 @@ A great way to start learning Symfony is via the [Quick Tour][4], which will tak
 
 Once you're feeling good, you can move onto reading the official [Symfony2 book][5].
 
-A default bundle, `YourNamespaceProjectModuleBundle`, shows you Symfony2 DDD architecture in action. After playing with it, you can remove it by following these steps:
-* remove the routing entries referencing YourNamespaceProjectModuleBundle in `app/config/routing.yml`.
-* remove the YourNamespaceProjectModuleBundle from the registered bundles in `app/AppKernel.php`.
-* rename `src/YourNamespace/Project/Module` directory to fit your needs.
+A default bundle, `ProjectModuleBundle`, shows you Symfony DDD architecture in action. After playing with it, you can remove it by following these steps:
+* remove the routing entries referencing ProjectModuleBundle in `app/config/routing.yml`.
+* remove the ProjectModuleBundle from the registered bundles in `app/AppKernel.php`.
+* rename `src/Project/Module` directory to fit your needs.
 * Remove all the `.gitkeep` files: `find . -name .git -prune -o -type d -empty -exec touch {}/.gitkeep \;`
 
 ## How to add a new module
@@ -62,18 +62,18 @@ A default bundle, `YourNamespaceProjectModuleBundle`, shows you Symfony2 DDD arc
 doctrine:
     orm:
         mappings:
-            YourNamespaceProjectModuleBundle:
+            ProjectModuleBundle:
                 type: yml
-                dir: '%kernel.root_dir%/../src/YourNamespace/Project/Module/Infrastructure/Mapping/Doctrine/ORM'
-                prefix: YourNamespace\Project\Module\Domain\Model
-                alias: YourNamespaceProjectModuleBundle
+                dir: '%kernel.root_dir%/../src/Project/Module/Infrastructure/Mapping/Doctrine/ORM'
+                prefix: Project\Module\Domain\Model
+                alias: ProjectModuleBundle
                 is_bundle: false
 ```
 
 `app/routing.yml`:
 ```yaml
-yournamespace_project_module_modulebundle:
-    resource: "@YourNamespaceProjectModuleBundle/Controller/"
+project_module_modulebundle:
+    resource: "@ProjectModuleBundle/Controller/"
     type:     annotation
 ```
 
@@ -84,14 +84,14 @@ yournamespace_project_module_modulebundle:
 public function registerBundles()
 {
     $bundles = [
-        new YourNamespace\Project\Module\Application\ModuleBundle\YourNamespaceProjectModuleBundle(),
+        new Project\Module\Application\ModuleBundle\ProjectModuleBundle(),
     ];
 }
 ```
 
 ## What's inside?
 The Symfony Standard DDD Edition is configured with the following defaults:
-* A YourNamespaceProjectModuleBundle you can use to start coding.
+* A ProjectModuleBundle you can use to start coding.
 * Twig as the only configured template engine.
 * Doctrine ORM/DBAL.
 * Swiftmailer.
@@ -118,45 +118,35 @@ TODO: Explain different layers.
 ## Folder structure
 ```
 src
-└── YourNamespace
-    └── Project
-        └── Module
-            ├── Application
-            │   └── ModuleBundle
-            │       ├── Controller
-            │       ├── DependencyInjection
-            │       │   └── Compiler
-            │       └── Resources
-            │           ├── config
-            │           └── views
-            │               └── default
-            ├── Domain
-            │   ├── Component
-            │   ├── Event
-            │   ├── Exception
-            │   ├── Model
-            │   ├── Repository
-            │   ├── Service
-            │   └── Value
-            ├── Infrastructure
-            │   ├── Mapping
-            │   │   └── Doctrine
-            │   │       └── ORM
-            │   ├── Migrations
-            │   │   └── Doctrine
-            │   ├── Repository
-            │   │   └── Doctrine
-            │   │       └── ORM
-            │   └── Service
-            └── Tests
-                ├── Domain
-                │   ├── Component
-                │   ├── Event
-                │   ├── Model
-                │   ├── Service
-                │   └── Value
-                └── Infrastructure
-                    └── Service
+└── Project
+    └── Module
+        ├── Application
+        │   └── ModuleBundle
+        │       ├── Controller
+        │       ├── Dependen=cyInjection
+        │       │   └── Compiler
+        │       └── Resources
+        │           ├── config
+        │           └── views
+        │               └── default
+        ├── Domain
+        │   ├── Component
+        │   ├── Event
+        │   ├── Exception
+        │   ├── Model
+        │   ├── Repository
+        │   ├── Service
+        │   └── Value
+        └── Infrastructure
+            ├── Mapping
+            │   └── Doctrine
+            │       └── ORM
+            ├── Migrations
+            │   └── Doctrine
+            ├── Repository
+            │   └── Doctrine
+            └── Service
+
 ```
 
 ## Inspiration
