@@ -62,12 +62,8 @@ A default bundle, `ProjectModuleBundle`, shows you Symfony DDD architecture in a
 doctrine:
     orm:
         mappings:
-            ProjectModuleBundle:
-                type: yml
-                dir: '%kernel.root_dir%/../src/Project/Module/Infrastructure/Mapping/Doctrine/ORM'
-                prefix: Project\Module\Domain\Model
-                alias: ProjectModuleBundle
-                is_bundle: false
+            # ...
+            ProjectModuleBundle: ~
 ```
 
 `app/routing.yml`:
@@ -84,6 +80,7 @@ project_module_modulebundle:
 public function registerBundles()
 {
     $bundles = [
+        // ...
         new Project\Module\Application\ModuleBundle\ProjectModuleBundle(),
     ];
 }
