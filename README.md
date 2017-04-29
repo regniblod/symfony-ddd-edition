@@ -47,48 +47,18 @@ A great way to start learning Symfony is via the [Quick Tour][4], which will tak
 
 Once you're feeling good, you can move onto reading the official [Symfony2 book][5].
 
-A default bundle, `ProjectModuleBundle`, shows you Symfony DDD architecture in action. After playing with it, you can remove it by following these steps:
-* remove the routing entries referencing ProjectModuleBundle in `app/config/routing.yml`.
-* remove the ProjectModuleBundle from the registered bundles in `app/AppKernel.php`.
-* rename `src/Project/Module` directory to fit your needs.
+A default bundle, `ModuleBundle`, shows you Symfony DDD architecture in action. After playing with it, you can remove it by following these steps:
+* remove the routing entries referencing ModuleBundle in `app/config/routing.yml`.
+* remove the ModuleBundle from the registered bundles in `app/AppKernel.php`.
+* remove `src/Project/Module` and `tests/Project/Module` directories.
 * Remove all the `.gitkeep` files: `find . -name .git -prune -o -type d -empty -exec touch {}/.gitkeep \;`
 
 ## How to add a new module
-1. Copy folder structure from `Module` directory.
-2. Add the configuration to this files, changing the path and the bundle name in each case:
-
-`app/config.yml`:
-```yaml
-doctrine:
-    orm:
-        mappings:
-            # ...
-            ProjectModuleBundle: ~
-```
-
-`app/routing.yml`:
-```yaml
-project_module_modulebundle:
-    resource: "@ProjectModuleBundle/Controller/"
-    type:     annotation
-```
-
-`app/AppKernel.php`:
-```php
-<?php
-
-public function registerBundles()
-{
-    $bundles = [
-        // ...
-        new Project\Module\Application\ModuleBundle\ProjectModuleBundle(),
-    ];
-}
-```
+Use the command `symfony-ddd:generator:create-module <module_name>` to create a new module with the complete src and tests directory structure, bundle, services and repositories files, routing and Doctrine mapping.
 
 ## What's inside?
 The Symfony Standard DDD Edition is configured with the following defaults:
-* A ProjectModuleBundle you can use to start coding.
+* A ModuleBundle you can use to start coding.
 * Twig as the only configured template engine.
 * Doctrine ORM/DBAL.
 * Swiftmailer.
@@ -106,6 +76,7 @@ It comes pre-configured with the following bundles:
 * **SensioDistributionBundle** (in dev/test env) - Adds functionality for configuring and working with Symfony distributions
 * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation capabilities
 * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component integration
+* [**SymfonyDDDGeneratorBundle**][13] (in dev/test env) - Adds code generation capabilities specifically for this Symfony distribution.
 
 All libraries and bundles included in the Symfony Standard Edition are released under the MIT or BSD license.
 
@@ -119,11 +90,13 @@ src
     └── Module
         ├── Application
         │   └── ModuleBundle
+        │       ├── Command
         │       ├── Controller
-        │       ├── Dependen=cyInjection
+        │       ├── DependencyInjection
         │       │   └── Compiler
         │       └── Resources
         │           ├── config
+        │           │   └── doctrine
         │           └── views
         │               └── default
         ├── Domain
@@ -135,15 +108,11 @@ src
         │   ├── Service
         │   └── Value
         └── Infrastructure
-            ├── Mapping
-            │   └── Doctrine
-            │       └── ORM
             ├── Migrations
             │   └── Doctrine
             ├── Repository
             │   └── Doctrine
             └── Service
-
 ```
 
 ## Inspiration
@@ -160,9 +129,9 @@ src
 - https://github.com/qandidate-labs/broadway
 - https://github.com/jgimeno/taskreporter
 - https://github.com/ddd-php/ddd-components
+- https://github.com/webdevilopers/php-ddd
 
 ## ToDo
-- Create command to generate automagically a new module.
 - Explain architecture.
 - Create sample app.
 

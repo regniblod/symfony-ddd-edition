@@ -59,7 +59,7 @@ doctrine:
         auto_mapping: true
 
         mappings:
-            ProjectModuleBundle: { prefix: Project\Module\Domain\Model }
+            ModuleBundle: { prefix: Project\Module\Domain\Model }
 
 # Swiftmailer Configuration
 swiftmailer:
