@@ -1,3 +1,5 @@
+# ABANDONED - This repo won't be updated anymore
+
 Symfony Standard DDD Edition
 ============================
 Welcome to the Symfony Standard DDD Edition - a fully-functional Symfony application with DDD architecture that you can use as the skeleton for your new applications.
